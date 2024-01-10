@@ -6,7 +6,7 @@
     <div class="footer-nav-list-items">
       <ul>
         <li v-for="item in navLinks">
-          <NuxtLink v-if="item.link.url" class="link-style" :to="item.link.url" target="_blank">{{item.label[0].text}}</NuxtLink>
+          <NuxtLink v-if="item.link.url" class="link-style" :to="item.link.url">{{item.label[0].text}}</NuxtLink>
           <NuxtLink v-else class="link-style" :to="item.link.uid">{{item.label[0].text}}</NuxtLink>
         </li>
       </ul>
