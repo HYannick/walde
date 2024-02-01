@@ -37,6 +37,7 @@ defineProps(getSliceComponentProps(["slice", "index", "slices", "context"]));
   .image-text-content {
     flex: 1;
     order: 2;
+    text-align: justify;
   }
 
   .image-text-picture {
@@ -53,7 +54,7 @@ defineProps(getSliceComponentProps(["slice", "index", "slices", "context"]));
   }
 }
 
-@media  screen and (min-width: 1366px) {
+@media  screen and (min-width: 1024px) {
   .image-text {
     flex-direction: row;
     gap: 10rem;
@@ -74,13 +75,10 @@ defineProps(getSliceComponentProps(["slice", "index", "slices", "context"]));
     }
     .image-text-content {
       order: 1;
+      text-align: initial;
     }
     .image-text-picture {
       order: 2;
-    }
-
-    .image-text-content {
-      flex: 1;
     }
 
     .image-text-picture {

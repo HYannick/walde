@@ -38,18 +38,20 @@ const slice = computed(() => props.slice);
   width: 100%;
   padding: 3rem;
   position: relative;
-  margin: 40rem 0;
+  margin: 40rem auto 30rem;
+  text-align: center;
   &:before {
     content: '';
     position: absolute;
     z-index: -1;
     width: 40rem;
-    right: -2rem;
-    top: 5rem;
+    left: 50%;
+    top: 50%;
     opacity: 1;
     scale: 1;
     aspect-ratio: 1;
-    background: rgba(216, 152, 79, 0.5);
+    transform: translate(-50%, -50%);
+    background: rgba(216, 152, 79, 0.2);
     clip-path: var(--polygon-14);
   }
 }
@@ -79,6 +81,8 @@ const slice = computed(() => props.slice);
     font-size: 3rem;
     padding: 0;
     margin: 20rem auto;
+    text-align: left;
   }
+
 }
 </style>

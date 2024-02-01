@@ -31,8 +31,14 @@ const props = defineProps<{slice: ImageTextSliceWithTwoPictures}>()
   padding: 0 1.5rem;
   font-size: 2.6rem;
   max-width: 144rem;
-  gap: 10rem;
+  gap: 15rem;
   flex-direction: column;
+  .image-text-content {
+    text-align: justify;
+    @media screen and (min-width: 1024px) {
+      text-align: initial;
+    }
+  }
   .spacer {
     height: 4rem;
   }
@@ -44,13 +50,20 @@ const props = defineProps<{slice: ImageTextSliceWithTwoPictures}>()
       height: 100%;
       object-fit: cover;
     }
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
   }
 
   .first-picture {
-    width: 67.5rem;
-    height: 67.5rem;
+    width: 100%;
+
     clip-path: var(--polygon-14);
     aspect-ratio: 1;
+    @media screen and (min-width: 1024px) {
+      width: 67.5rem;
+      height: 67.5rem;
+    }
   }
 
   .second-picture {
@@ -59,7 +72,11 @@ const props = defineProps<{slice: ImageTextSliceWithTwoPictures}>()
     position: absolute;
     bottom: -10rem;
     right: -10rem;
+    display: none;
 
+    @media screen and (min-width: 1024px) {
+      display: block;
+    }
     .second-picture-poly {
       clip-path: var(--polygon-14);
       aspect-ratio: 1;

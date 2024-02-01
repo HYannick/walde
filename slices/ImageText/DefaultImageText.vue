@@ -22,7 +22,7 @@ const props = defineProps<{slice: ImageTextSliceDefault}>()
 
 .image-title-text-container {
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 15rem;
   display: flex;
   flex-direction: column;
 }
@@ -88,6 +88,7 @@ const props = defineProps<{slice: ImageTextSliceDefault}>()
     max-width: 144rem;
     width: 100%;
     margin: 0 auto 15rem;
+    padding: 0 1.5rem;
     &.-reverse-order {
       justify-content: flex-end;
     }
@@ -98,9 +99,9 @@ const props = defineProps<{slice: ImageTextSliceDefault}>()
     gap: 6rem;
     text-align: right;
     flex-direction: row;
-    padding: 0;
-    margin-top: 10rem;
+
     align-items: center;
+
     &.-reverse-order {
       text-align: left;
       .image-title-text-content {
