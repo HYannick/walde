@@ -1,5 +1,8 @@
 # Waldè Maroowo
 
+
+![Group 65](https://github.com/HYannick/walde/assets/2854982/d41ad210-9704-4e28-86ca-d7ff0b94e12f)
+
 NGO website
 
 https://walde-maroowo.netlify.app/
