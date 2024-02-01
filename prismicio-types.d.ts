@@ -139,12 +139,100 @@ export type ActionsDocument<Lang extends string = string> =
     Lang
   >;
 
+/**
+ * Item in *Contact → contact*
+ */
+export interface ContactDocumentDataContactItem {
+  /**
+   * name field in *Contact → contact*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.contact[].name
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  name: prismic.RichTextField;
+
+  /**
+   * adress field in *Contact → contact*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.contact[].adress
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  adress: prismic.RichTextField;
+
+  /**
+   * phone field in *Contact → contact*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.contact[].phone
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  phone: prismic.RichTextField;
+
+  /**
+   * mail field in *Contact → contact*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.contact[].mail
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  mail: prismic.RichTextField;
+
+  /**
+   * logo field in *Contact → contact*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.contact[].logo
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  logo: prismic.ImageField<never>;
+}
+
 type ContactDocumentDataSlicesSlice = never;
 
 /**
  * Content for Contact documents
  */
 interface ContactDocumentData {
+  /**
+   * intro field in *Contact*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.intro
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  intro: prismic.RichTextField;
+
+  /**
+   * picture field in *Contact*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.picture
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  picture: prismic.ImageField<never>;
+
+  /**
+   * contact field in *Contact*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.contact[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  contact: prismic.GroupField<Simplify<ContactDocumentDataContactItem>>;
+
   /**
    * Slice Zone field in *Contact*
    *
@@ -1585,6 +1673,7 @@ declare module "@prismicio/client" {
       ActionsDocumentDataSlicesSlice,
       ContactDocument,
       ContactDocumentData,
+      ContactDocumentDataContactItem,
       ContactDocumentDataSlicesSlice,
       FooterDocument,
       FooterDocumentData,

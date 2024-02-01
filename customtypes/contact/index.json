@@ -6,11 +6,80 @@
   "status": true,
   "json": {
     "Main": {
+      "intro": {
+        "type": "StructuredText",
+        "config": {
+          "label": "intro",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
       "uid": {
         "type": "UID",
         "config": {
           "label": "contact",
           "placeholder": ""
+        }
+      },
+      "picture": {
+        "type": "Image",
+        "config": {
+          "label": "picture",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "contact": {
+        "type": "Group",
+        "config": {
+          "label": "contact",
+          "fields": {
+            "name": {
+              "type": "StructuredText",
+              "config": {
+                "label": "name",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "adress": {
+              "type": "StructuredText",
+              "config": {
+                "label": "adress",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "phone": {
+              "type": "StructuredText",
+              "config": {
+                "label": "phone",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "mail": {
+              "type": "StructuredText",
+              "config": {
+                "label": "mail",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "logo": {
+              "type": "Image",
+              "config": {
+                "label": "logo",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
         }
       },
       "slices": {
