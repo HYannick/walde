@@ -104,6 +104,9 @@ const props = defineProps<{slice: ImageTextSliceDefault}>()
 
     &.-reverse-order {
       text-align: left;
+      .image-title-text-title {
+        text-align: left;
+      }
       .image-title-text-content {
         order: 2;
         align-items: flex-start;
@@ -123,9 +126,12 @@ const props = defineProps<{slice: ImageTextSliceDefault}>()
       margin-top: 0;
     }
 
-    &-title:after {
+    &-title{
       text-align: right;
-      margin: 0 0 3rem;
+      &:after {
+        text-align: right;
+        margin: 0 0 3rem;
+      }
     }
   }
 
